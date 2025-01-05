@@ -1,0 +1,20 @@
+{
+  "compatibilityLevel": "JAVA_8",
+  "package": "me.meredith.weavefks.weavefks.mixins",
+  "mixins": [
+    "MinecraftMixin",
+    "GuiPlayerTabOverlayMixin",
+    "RendererLivingEntityMixin",
+    "BlockGrassMixin",
+    "BlockMixin",
+    "BlockModelRendererMixin",
+    "EntityRendererMixin",
+    "EntityPlayerMixin",
+    "EntityPlayerSPMixin",
+    "WorldRendererMixin",
+    "MixinModelBase",
+    "MixinModelBiped",
+    "MixinEffectRenderer"
+  ]
+}
+

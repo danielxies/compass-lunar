@@ -1,0 +1,11 @@
+{
+  "mixinConfigs": [
+    "weavefks.mixins.json"
+  ],
+  "entrypoints": [
+    "me.meredith.Main"
+  ],
+  "id": "weavefks",
+  "version": "1.0",
+  "name": "WeaveFks"
+}
