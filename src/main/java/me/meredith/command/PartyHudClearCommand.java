@@ -17,6 +17,7 @@ public class PartyHudClearCommand extends Command {
 
         WeaveFks weavefks = WeaveFks.getInstance();
         weavefks.clearPartyMembers();
+        weavefks.clearPlayerNicknames();
         weavefks.addSelfToPartyMembers();
 
         try {

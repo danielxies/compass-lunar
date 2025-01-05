@@ -35,6 +35,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.UUID;
+import java.util.Map;
+import java.util.HashMap;
 
 public class WeaveFks {
     public static WeaveFks instance;
@@ -52,7 +54,8 @@ public class WeaveFks {
     public static final String VERSION = "1.0";
 
     private static List<String> partyMembers = new ArrayList<>();
-    
+    private final Map<String, String> playerNicknames = new HashMap<>();
+
     public WeaveFks() {
         instance = this;
     }
@@ -203,5 +206,21 @@ public class WeaveFks {
     public void onRender() {
         regenerationTimerRenderer.render();
         finalsCounterRenderer.render();
+    }
+
+    public void setPlayerNickname(String playerName, String nickname) {
+        playerNicknames.put(playerName, nickname);
+    }
+
+    public String getPlayerNickname(String playerName) {
+        return playerNicknames.getOrDefault(playerName, playerName);
+    }
+
+    public void removePlayerNickname(String playerName) {
+        playerNicknames.remove(playerName);
+    }
+
+    public void clearPlayerNicknames() {
+        playerNicknames.clear();
     }
 }

@@ -128,7 +128,11 @@ public class PartyHudListener {
     }
 
     @SubscribeEvent
-    public void onRender(RenderGameOverlayEvent.Post event) {
+    public void onRender(RenderGameOverlayEvent event) {
+        if (!weavefks.getConfig().displayPartyHUD) {
+            return;
+        }
+
         renderPartyHUD();
     }
 
@@ -365,7 +369,14 @@ public class PartyHudListener {
                 GlStateManager.translate(colX_name, textCenterY, 0);
                 GlStateManager.scale(textScale, textScale, 1.0f);
                 GlStateManager.translate(-colX_name, -textCenterY, 0);
-                fr.drawStringWithShadow(row.nameString, colX_name, textY, 0xFFFFFF);
+                String rawName = row.info.getGameProfile().getName();
+                String displayName = weavefks.getPlayerNickname(rawName);
+                // Get the color from the original name string
+                String colorCode = "";
+                if (row.nameString.contains("§")) {
+                    colorCode = "§" + row.nameString.charAt(row.nameString.indexOf("§") + 1);
+                }
+                fr.drawStringWithShadow(colorCode + displayName, colX_name, textY, 0xFFFFFF);
                 GlStateManager.popMatrix();
 
                 // 2) finals
