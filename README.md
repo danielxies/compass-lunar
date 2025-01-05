@@ -1,55 +1,46 @@
 # WeaveFks
 
-<img alt="downloadcount" src="images/updates.png" />
+![Downloads](images/updates.png)
 
-Mega Walls Final Kills Counter Mod for Weave (Supports Lunar Client & more launchers to come!)
+> Mega Walls Final Kills Counter Mod for Weave (Supports Lunar Client & more launchers to come!)
 
-# Commands
+## Commands
 
-## Squad Hud
+### Squad HUD
+| Command | Description |
+|---------|-------------|
+| `/squad add <username>` | Adds user to the squad HUD |
+| `/squad remove <username>` | Removes user from the squad HUD |
+| `/squad clear` | Clears squad HUD |
+| `/phudpos <x> <y>` | Moves HUD position |
 
-`/squad add username` - adds user to the squad hud
+### Compass HUD
+| Command | Description |
+|---------|-------------|
+| `/compass <x> <y>` | Sets compass position |
+| `/compassscale <scale>` | Sets compass scale |
+| `/compasstoggle` | Toggles between keypress only (U) or permanent view |
 
-`/squad remove username` - removes user from the squad hud
+### Finals Display
+| Command | Description |
+|---------|-------------|
+| `/displayfinalscounter` | Toggles HUD |
+| `/setpos <x> <y>` | Sets HUD X and Y position |
+| `/setscale <scale>` | Sets HUD scale |
+| `/finalsintab` | Toggles finals in tab *(Currently not working)* |
+| `/finals` | Prints team finals to personal chat |
+| `/fks say` | Say finals to your team |
+| `/playerfinals` | Prints player finals to chat |
+| `/resetfinals` | Resets finals count |
 
-`/squad clear` - clears squad hud
+### Regen Timer
+| Command | Description |
+|---------|-------------|
+| `/regenscale <scale>` | Sets regeneration timer scale |
+| `/regenpos <x> <y>` | Sets position of regen timer |
 
-`/phudpos x y` - moves hud
-
-## Compass Hud
-
-`/compass x y` - sets compass position
-
-`/compassscale scale` - sets compass scale
-
-`/compasstoggle` - toggles it to keypress only (U) or permanent view
-
-## Finals Display
-
-`/displayfinalscounter` - Toggles HUD.
-
-`/setpos x y` - Sets HUD X and Y.
-
-`/setscale scale` - Sets HUD scale.
-
-`/finalsintab` - Toggles finals in tab. (Finals in tab don't work currently)
-
-`/finals` - Prints team finals to your personal chat.
-
-`/fks say` - Say finals to your team.
-
-`/playerfinals` - Prints player finals to chat.
-
-`/resetfinals` - Resets finals count.
-
-## Regen Timer
-
-`/regenscale scale` - sets regeneration timer scale
-
-`/regenpos x y` - sets position of regen timer
-
-## Energy Display
-
-`/energy` - toggles on/off
-
-`/energypos x y` - sets position of energy display
+### Energy Display
+| Command | Description |
+|---------|-------------|
+| `/energy` | Toggles energy display on/off |
+| `/energypos <x> <y>` | Sets position of energy display |
