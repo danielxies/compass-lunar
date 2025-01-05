@@ -371,12 +371,13 @@ public class PartyHudListener {
                 GlStateManager.translate(-colX_name, -textCenterY, 0);
                 String rawName = row.info.getGameProfile().getName();
                 String displayName = weavefks.getPlayerNickname(rawName);
-                // Get the color from the original name string
-                String colorCode = "";
-                if (row.nameString.contains("§")) {
-                    colorCode = "§" + row.nameString.charAt(row.nameString.indexOf("§") + 1);
+                // Get everything before the actual name in the original string
+                String prefix = "";
+                int nameIndex = row.nameString.toLowerCase().indexOf(rawName.toLowerCase());
+                if (nameIndex > 0) {
+                    prefix = row.nameString.substring(0, nameIndex);
                 }
-                fr.drawStringWithShadow(colorCode + displayName, colX_name, textY, 0xFFFFFF);
+                fr.drawStringWithShadow(prefix + displayName, colX_name, textY, 0xFFFFFF);
                 GlStateManager.popMatrix();
 
                 // 2) finals
